@@ -15,7 +15,7 @@ public class TicTacToeRunner
 		while ( ! ( ttt.isWinner('X') || ttt.isWinner('O') || ttt.isFull() ) )
 		{
 			ttt.displayBoard();
-			System.out.print( "'" + p + "', choose your location (row, column): " );
+			System.out.print( "'" + p + "', choose your location (row, column)(Click enter after every number): " );
 			r = keyboard.nextInt();
 			c = keyboard.nextInt();
 
