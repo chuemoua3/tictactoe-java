@@ -16,9 +16,11 @@ public class TicTacToeClass {
 	}
 
 	// Accessor Methods
+	
 	// returns true if the letter passed in has three in a row
-	// checking across the board
 	public boolean isWinner(char p) {
+
+		// checking across the board
 		if (board[0][0] == p && board[0][1] == p && board[0][2] == p) {
 			return true;
 		} else if (board[1][0] == p && board[1][1] == p && board[1][2] == p) {
@@ -50,7 +52,7 @@ public class TicTacToeClass {
 		return turns == 9;
 	}
 
-	// returns true if the given row and column corresponds to a valid space
+	// returns true if all spaces are filled and no one wins
 	public boolean isCat() {
 		if (turns == 9 && !isWinner('X') && !isWinner('O')) {
 			return true;
@@ -59,6 +61,7 @@ public class TicTacToeClass {
 		}
 	}
 
+	// returns true if the given row and column corresponds to a valid space
 	public boolean isValid(int r, int c) {
 		if (0 <= r && r <= 2 && 0 <= c && c <= 2)
 			return true;
@@ -90,6 +93,7 @@ public class TicTacToeClass {
 	}
 
 	// Modifiers
+
 	// allowing the player to place their move on a row and column where rows and
 	// columns are in valid numbers of 0,1,2
 	public void playMove(char p, int r, int c) {
