@@ -20,26 +20,26 @@ public class TicTacToeClass {
 	// returns true if the letter passed in has three in a row
 	public boolean isWinner(char p) {
 
-		// checking across the board
-		if (board[0][0] == p && board[0][1] == p && board[0][2] == p) {
-			return true;
-		} else if (board[1][0] == p && board[1][1] == p && board[1][2] == p) {
-			return true;
-		} else if (board[2][0] == p && board[2][1] == p && board[2][0] == p) {
-			return true;
-
-			// checking down the board
-		} else if (board[0][2] == p && board[1][0] == p && board[2][0] == p) {
+		// checking down the board
+		if (board[0][0] == p && board[1][0] == p && board[2][0] == p) {
 			return true;
 		} else if (board[0][1] == p && board[1][1] == p && board[2][1] == p) {
 			return true;
 		} else if (board[0][2] == p && board[1][2] == p && board[2][2] == p) {
 			return true;
 
+			// checking across the board
+		} else if (board[0][0] == p && board[0][1] == p && board[0][2] == p) {
+			return true;
+		} else if (board[1][0] == p && board[1][1] == p && board[1][2] == p) {
+			return true;
+		} else if (board[2][0] == p && board[2][1] == p && board[2][2] == p) {
+			return true;
+
 			// checking diagonal the board
 		} else if (board[0][0] == p && board[1][1] == p && board[2][2] == p) {
 			return true;
-		} else if (board[0][2] == p && board[1][1] == p && board[2][0] == p) {
+		} else if (board[2][0] == p && board[1][1] == p && board[0][2] == p) {
 			return true;
 		} else {
 			return false;
@@ -97,8 +97,8 @@ public class TicTacToeClass {
 	// allowing the player to place their move on a row and column where rows and
 	// columns are in valid numbers of 0,1,2
 	public void playMove(char p, int r, int c) {
-		board[r][c] = p;
-		turns++;
-	}
+			board[r][c] = p;
+			turns++;
+		}
 
 }
